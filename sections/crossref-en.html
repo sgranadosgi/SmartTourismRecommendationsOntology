@@ -125,7 +125,7 @@ This section provides details for each class and property defined by [Ontology N
     has super-classes
    </dt>
    <dd>
-    <a href="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation">Accommodation</a> <sup class="type-c" title="class">c</sup>
+    <a href="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation">Accommodation</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error1" target="_blank" title="http://org.semanticweb.owlapi/error#Error1">Error1</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
@@ -228,14 +228,17 @@ This section provides details for each class and property defined by [Ontology N
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#hasLocation" title="http://www.example.org/SmartTourismRecommendationsOntology#hasLocation"> <span>has Location</span> </a></li>
+  <li><a href="#hasLocationAccomodation" title="http://www.example.org/SmartTourismRecommendationsOntology#hasLocationAccomodation"> <span>has Location Accomodation</span> </a></li>
+  <li><a href="#hasLocationRestaurant" title="http://www.example.org/SmartTourismRecommendationsOntology#hasLocationRestaurant"> <span>has Location Restaurant</span> </a></li>
   <li><a href="#isHeldInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isHeldInCity"> <span>is Held In City</span> </a></li>
-  <li><a href="#isLocatedInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity"> <span>is Located In City</span> </a></li>
+  <li><a href="#isLocatedInCityAccommodation" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAccommodation"> <span>is Located In City Accommodation</span> </a></li>
+  <li><a href="#isLocatedInCityAttraction" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAttraction"> <span>is Located In City Attraction</span> </a></li>
+  <li><a href="#isLocatedInCityRestaurant" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant"> <span>is Located In City Restaurant</span> </a></li>
   <li><a href="#isRecommendedFor" title="http://www.example.org/SmartTourismRecommendationsOntology#isRecommendedFor">isRecommendedFor</a></li>
  </ul>
- <div class="entity" id="hasLocation">
-  <h3>has Location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#hasLocation</p>
+ <div class="entity" id="hasLocationAccomodation">
+  <h3>has Location Accomodation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#hasLocationAccomodation</p>
   <div class="description">
    <dl>
     <dt>
@@ -244,6 +247,23 @@ This section provides details for each class and property defined by [Ontology N
     <dd>
      <a href="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation">Accommodation</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.example.org/SmartTourismRecommendationsOntology#Location" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLocationRestaurant">
+  <h3>has Location Restaurant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#hasLocationRestaurant</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
     <dd>
      <a href="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
     </dd>
@@ -276,9 +296,9 @@ This section provides details for each class and property defined by [Ontology N
    </dl>
   </div>
  </div>
- <div class="entity" id="isLocatedInCity">
-  <h3>is Located In City<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity</p>
+ <div class="entity" id="isLocatedInCityAccommodation">
+  <h3>is Located In City Accommodation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAccommodation</p>
   <div class="description">
    <dl>
     <dt>
@@ -287,9 +307,43 @@ This section provides details for each class and property defined by [Ontology N
     <dd>
      <a href="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Accommodation">Accommodation</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.example.org/SmartTourismRecommendationsOntology#City" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isLocatedInCityAttraction">
+  <h3>is Located In City Attraction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAttraction</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
     <dd>
      <a href="http://www.example.org/SmartTourismRecommendationsOntology#Attraction" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.example.org/SmartTourismRecommendationsOntology#City" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isLocatedInCityRestaurant">
+  <h3>is Located In City Restaurant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
     <dd>
      <a href="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
     </dd>
@@ -619,7 +673,7 @@ This section provides details for each class and property defined by [Ontology N
     has facts
    </dt>
    <dd>
-    <a href="#isLocatedInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.example.org/SmartTourismRecommendationsOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#isLocatedInCityRestaurant" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant">is Located In City Restaurant</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.example.org/SmartTourismRecommendationsOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#cuisineType" title="http://www.example.org/SmartTourismRecommendationsOntology#cuisineType">cuisine Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Spanish cuisine"</span>
@@ -640,7 +694,7 @@ This section provides details for each class and property defined by [Ontology N
     has facts
    </dt>
    <dd>
-    <a href="#isLocatedInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.example.org/SmartTourismRecommendationsOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#isLocatedInCityAccommodation" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAccommodation">is Located In City Accommodation</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.example.org/SmartTourismRecommendationsOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#hotelCategory" title="http://www.example.org/SmartTourismRecommendationsOntology#hotelCategory">hotel Category</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5 stars"</span>
@@ -733,7 +787,7 @@ This section provides details for each class and property defined by [Ontology N
     has facts
    </dt>
    <dd>
-    <a href="#isLocatedInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup> <a href="http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza">Zaragoza</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#isLocatedInCityRestaurant" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant">is Located In City Restaurant</a> <sup class="type-op" title="object property">op</sup> <a href="http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza">Zaragoza</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#cuisineType" title="http://www.example.org/SmartTourismRecommendationsOntology#cuisineType">cuisine Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Japonesa"</span>
@@ -743,21 +797,21 @@ This section provides details for each class and property defined by [Ontology N
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
  <h3 id="swrlrules" class="list">SWRL rules</h3>
  <ul class="hlist">
-  <li><a href="#d4e474">S1</a></li>
-  <li><a href="#d4e764">S2</a></li>
-  <li><a href="#d4e598">S3</a></li>
+  <li><a href="#d4e506">S1</a></li>
+  <li><a href="#d4e796">S2</a></li>
+  <li><a href="#d4e630">S3</a></li>
  </ul>
- <div class="entity" id="d4e474">
+ <div class="entity" id="d4e506">
   <h3>S1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p><br><br><a href="#Hotel" title="http://www.example.org/SmartTourismRecommendationsOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?h) , <a href="#Event" title="http://www.example.org/SmartTourismRecommendationsOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>(?e) , <a href="#isLocatedInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup>(?h,?c) , <a href="#isHeldInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isHeldInCity">is Held In City</a> <sup class="type-op" title="object property">op</sup>(?e,?c) -&gt; <a href="#isRecommendedFor" title="http://www.example.org/SmartTourismRecommendationsOntology#isRecommendedFor">isRecommendedFor</a> <sup class="type-op" title="object property">op</sup>(?h,?e)</p>
+  <p><br><br><a href="#Hotel" title="http://www.example.org/SmartTourismRecommendationsOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?h) , <a href="#Event" title="http://www.example.org/SmartTourismRecommendationsOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>(?e) , <a href="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup>(?h,?c) , <a href="#isHeldInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isHeldInCity">is Held In City</a> <sup class="type-op" title="object property">op</sup>(?e,?c) -&gt; <a href="#isRecommendedFor" title="http://www.example.org/SmartTourismRecommendationsOntology#isRecommendedFor">isRecommendedFor</a> <sup class="type-op" title="object property">op</sup>(?h,?e)</p>
  </div>
- <div class="entity" id="d4e764">
+ <div class="entity" id="d4e796">
   <h3>S2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p><br><br><a href="http://www.example.org/SmartTourismRecommendationsOntology#Attraction" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#isLocatedInCity" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup>(?a,?c) , <a href="#population" title="http://www.example.org/SmartTourismRecommendationsOntology#population">population</a> <sup class="type-dp" title="data property">dp</sup>(?c,?p) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#HighlyRecommended" title="http://www.example.org/SmartTourismRecommendationsOntology#HighlyRecommended">HighlyRecommended</a> <sup class="type-dp" title="data property">dp</sup>(?a,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+  <p><br><br><a href="http://www.example.org/SmartTourismRecommendationsOntology#Attraction" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity">is Located In City</a> <sup class="type-op" title="object property">op</sup>(?a,?c) , <a href="#population" title="http://www.example.org/SmartTourismRecommendationsOntology#population">population</a> <sup class="type-dp" title="data property">dp</sup>(?c,?p) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#HighlyRecommended" title="http://www.example.org/SmartTourismRecommendationsOntology#HighlyRecommended">HighlyRecommended</a> <sup class="type-dp" title="data property">dp</sup>(?a,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
  </div>
- <div class="entity" id="d4e598">
+ <div class="entity" id="d4e630">
   <h3>S3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p><br><br><a href="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?r) , <a href="#cuisineType" title="http://www.example.org/SmartTourismRecommendationsOntology#cuisineType">cuisine Type</a> <sup class="type-dp" title="data property">dp</sup>(?r,?ct) , <a href="http://www.w3.org/2003/11/swrlb#equal" title="equal">equal</a>(?) , <a href="#hasLocation" title="http://www.example.org/SmartTourismRecommendationsOntology#hasLocation">has Location</a> <sup class="type-op" title="object property">op</sup>(?r,?l) , <a href="#CityCenter" title="http://www.example.org/SmartTourismRecommendationsOntology#CityCenter">City Center</a> <sup class="type-c" title="class">c</sup>(?l) -&gt; <a href="#GreenChoice" title="http://www.example.org/SmartTourismRecommendationsOntology#GreenChoice">GreenChoice</a> <sup class="type-dp" title="data property">dp</sup>(?r,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+  <p><br><br><a href="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant" target="_blank" title="http://www.example.org/SmartTourismRecommendationsOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?r) , <a href="#cuisineType" title="http://www.example.org/SmartTourismRecommendationsOntology#cuisineType">cuisine Type</a> <sup class="type-dp" title="data property">dp</sup>(?r,?ct) , <a href="http://www.w3.org/2003/11/swrlb#equal" title="equal">equal</a>(?) , <a href="#hasLocationRestaurant" title="http://www.example.org/SmartTourismRecommendationsOntology#hasLocationRestaurant">has Location Restaurant</a> <sup class="type-op" title="object property">op</sup>(?r,?l) , <a href="#CityCenter" title="http://www.example.org/SmartTourismRecommendationsOntology#CityCenter">City Center</a> <sup class="type-c" title="class">c</sup>(?l) -&gt; <a href="#GreenChoice" title="http://www.example.org/SmartTourismRecommendationsOntology#GreenChoice">GreenChoice</a> <sup class="type-dp" title="data property">dp</sup>(?r,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
  </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

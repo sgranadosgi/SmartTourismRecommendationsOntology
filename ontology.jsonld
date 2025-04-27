@@ -85,13 +85,9 @@
   } ]
 }, {
   "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity"
   } ]
 }, {
   "@id" : "_:genid20",
@@ -214,7 +210,7 @@
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#l"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#hasLocation"
+    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#hasLocationRestaurant"
   } ]
 }, {
   "@id" : "_:genid33",
@@ -302,6 +298,9 @@
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Madrid"
   } ]
 }, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -341,7 +340,7 @@
   "http://www.example.org/SmartTourismRecommendationsOntology#cuisineType" : [ {
     "@value" : "Spanish cuisine"
   } ],
-  "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity" : [ {
+  "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Madrid"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -414,9 +413,9 @@
   "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Hotel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Accommodation"
+    "@id" : "http://org.semanticweb.owlapi/error#Error1"
   }, {
-    "@id" : "_:genid2"
+    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Accommodation"
   } ]
 }, {
   "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#HotelRitzMadrid",
@@ -424,7 +423,7 @@
   "http://www.example.org/SmartTourismRecommendationsOntology#hotelCategory" : [ {
     "@value" : "5 stars"
   } ],
-  "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity" : [ {
+  "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAccommodation" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Madrid"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -511,7 +510,7 @@
   "http://www.example.org/SmartTourismRecommendationsOntology#cuisineType" : [ {
     "@value" : "Japonesa"
   } ],
-  "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity" : [ {
+  "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -581,11 +580,18 @@
   "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#h",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
-  "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#hasLocation",
+  "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#hasLocationAccomodation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Accommodation"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Location"
+  } ]
+}, {
+  "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#hasLocationRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Restaurant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -611,12 +617,29 @@
   } ]
 }, {
   "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAccommodation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Accommodation"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#City"
+  } ]
+}, {
+  "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAttraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Attraction"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#City"
+  } ]
+}, {
+  "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.example.org/SmartTourismRecommendationsOntology#Restaurant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -667,6 +690,9 @@
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2003/11/swrlb#equal",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]

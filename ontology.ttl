@@ -16,6 +16,10 @@
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -28,11 +32,16 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.example.org/SmartTourismRecommendationsOntology#hasLocation
-:hasLocation rdf:type owl:ObjectProperty ;
-             rdfs:domain :Accommodation ,
-                         :Restaurant ;
-             rdfs:range :Location .
+###  http://www.example.org/SmartTourismRecommendationsOntology#hasLocationAccomodation
+:hasLocationAccomodation rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Accommodation ;
+                         rdfs:range :Location .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#hasLocationRestaurant
+:hasLocationRestaurant rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Restaurant ;
+                       rdfs:range :Location .
 
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#isHeldInCity
@@ -42,11 +51,25 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity
-:isLocatedInCity rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Accommodation ,
-                             :Attraction ,
-                             :Restaurant ;
-                 rdfs:range :City .
+:isLocatedInCity rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAccommodation
+:isLocatedInCityAccommodation rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Accommodation ;
+                              rdfs:range :City .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityAttraction
+:isLocatedInCityAttraction rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Attraction ;
+                           rdfs:range :City .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCityRestaurant
+:isLocatedInCityRestaurant rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Restaurant ;
+                           rdfs:range :City .
 
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#isRecommendedFor
@@ -129,6 +152,10 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
 ###  http://www.example.org/SmartTourismRecommendationsOntology#Accommodation
 :Accommodation rdf:type owl:Class .
 
@@ -176,11 +203,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#Hotel
 :Hotel rdf:type owl:Class ;
-       rdfs:subClassOf :Accommodation ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :isLocatedInCity ;
-                         owl:cardinality "1"^^xsd:nonNegativeInteger
-                       ] .
+       rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
+                       :Accommodation .
 
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#Location
@@ -250,14 +274,14 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.example.org/SmartTourismRecommendationsOntology#CasaPacoRestaurant
 :CasaPacoRestaurant rdf:type owl:NamedIndividual ,
                              :GourmetRestaurant ;
-                    :isLocatedInCity :Madrid ;
+                    :isLocatedInCityRestaurant :Madrid ;
                     :cuisineType "Spanish cuisine" .
 
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#HotelRitzMadrid
 :HotelRitzMadrid rdf:type owl:NamedIndividual ,
                           :LuxuryHotel ;
-                 :isLocatedInCity :Madrid ;
+                 :isLocatedInCityAccommodation :Madrid ;
                  :hotelCategory "5 stars" .
 
 
@@ -280,13 +304,16 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.example.org/SmartTourismRecommendationsOntology#Restaurante_Delicia_Zaragoza
 :Restaurante_Delicia_Zaragoza rdf:type owl:NamedIndividual ,
                                        :FastFoodRestaurant ;
-                              :isLocatedInCity :Zaragoza ;
+                              :isLocatedInCityRestaurant :Zaragoza ;
                               :cuisineType "Japonesa" .
 
 
 ###  http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza
 :Zaragoza rdf:type owl:NamedIndividual .
 
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+] .
 
 #################################################################
 #    Rules
@@ -377,7 +404,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasLocation ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasLocationRestaurant ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :r ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :l
                                                                                       ] ;
