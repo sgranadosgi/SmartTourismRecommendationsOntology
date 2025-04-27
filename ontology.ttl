@@ -1,0 +1,452 @@
+@prefix : <http://www.example.org/SmartTourismRecommendationsOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.example.org/SmartTourismRecommendationsOntology#> .
+
+<http://www.example.org/SmartTourismRecommendationsOntology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:domain :Accommodation ,
+                         :Restaurant ;
+             rdfs:range :Location .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#isHeldInCity
+:isHeldInCity rdf:type owl:ObjectProperty ;
+              rdfs:domain :Event ;
+              rdfs:range :City .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity
+:isLocatedInCity rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Accommodation ,
+                             :Attraction ,
+                             :Restaurant ;
+                 rdfs:range :City .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#isRecommendedFor
+:isRecommendedFor rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Hotel ;
+                  rdfs:range :Event ;
+                  rdfs:comment "Relates a hotel with an event it is recommended for." ;
+                  rdfs:label "isRecommendedFor" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#GreenChoice
+:GreenChoice rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Restaurant ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Indicates that a restaurant is a green (vegetarian) choice." ;
+             rdfs:label "GreenChoice" .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#HighlyRecommended
+:HighlyRecommended rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Attraction ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:comment "Marks attractions as highly recommended if conditions are met." ;
+                   rdfs:label "HighlyRecommended" .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#attractionType
+:attractionType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Attraction ;
+                rdfs:range xsd:string .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#country
+:country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :City ;
+         rdfs:range xsd:string .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#cuisineType
+:cuisineType rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Restaurant ;
+             rdfs:range xsd:string .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :City ;
+             rdfs:range xsd:string .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#endDate
+:endDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:range xsd:date .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#hotelCategory
+:hotelCategory rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Hotel ;
+               rdfs:range xsd:string .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#population
+:population rdf:type owl:DatatypeProperty ;
+            rdfs:domain :City ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#startDate
+:startDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Event ;
+           rdfs:range xsd:date .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Accommodation
+:Accommodation rdf:type owl:Class .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Attraction
+:Attraction rdf:type owl:Class .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#BudgetHotel
+:BudgetHotel rdf:type owl:Class ;
+             rdfs:subClassOf :Hotel .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#City
+:City rdf:type owl:Class .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#CityCenter
+:CityCenter rdf:type owl:Class ;
+            rdfs:subClassOf :Location .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :startDate ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#FastFoodRestaurant
+:FastFoodRestaurant rdf:type owl:Class ;
+                    rdfs:subClassOf :Restaurant .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#GourmetRestaurant
+:GourmetRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Accommodation ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isLocatedInCity ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Location
+:Location rdf:type owl:Class .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf :Hotel .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Monument
+:Monument rdf:type owl:Class ;
+          rdfs:subClassOf :Attraction .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :Attraction .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#MusicEvent
+:MusicEvent rdf:type owl:Class ;
+            rdfs:subClassOf :Event .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#OldTown
+:OldTown rdf:type owl:Class ;
+         rdfs:subClassOf :Location .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Park
+:Park rdf:type owl:Class ;
+      rdfs:subClassOf :Attraction .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Restaurant
+:Restaurant rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Barcelona
+<http://dbpedia.org/resource/Barcelona> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs :Barcelona .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Barcelona
+
+###  http://dbpedia.org/resource/Madrid
+<http://dbpedia.org/resource/Madrid> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs :Madrid .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Madrid
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Barcelona
+:Barcelona rdf:type owl:NamedIndividual ,
+                    :City ;
+           :country "Spain" ;
+           :description "City in Catalonia, Spain" ;
+           :population 1664182 .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#CasaPacoRestaurant
+:CasaPacoRestaurant rdf:type owl:NamedIndividual ,
+                             :GourmetRestaurant ;
+                    :isLocatedInCity :Madrid ;
+                    :cuisineType "Spanish cuisine" .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#HotelRitzMadrid
+:HotelRitzMadrid rdf:type owl:NamedIndividual ,
+                          :LuxuryHotel ;
+                 :isLocatedInCity :Madrid ;
+                 :hotelCategory "5 stars" .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#JazzFestivalMadrid
+:JazzFestivalMadrid rdf:type owl:NamedIndividual ,
+                             :MusicEvent ;
+                    :isHeldInCity :Madrid ;
+                    :endDate "2025-11-10"^^xsd:date ;
+                    :startDate "2025-11-01"^^xsd:date .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Madrid
+:Madrid rdf:type owl:NamedIndividual ,
+                 :City ;
+        :country "Spain" ;
+        :description "Capital city of Spain" ;
+        :population 3223334 .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Restaurante_Delicia_Zaragoza
+:Restaurante_Delicia_Zaragoza rdf:type owl:NamedIndividual ,
+                                       :FastFoodRestaurant ;
+                              :isLocatedInCity :Zaragoza ;
+                              :cuisineType "Japonesa" .
+
+
+###  http://www.example.org/SmartTourismRecommendationsOntology#Zaragoza
+:Zaragoza rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:h rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:e rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:ct rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:l rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :h
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Event ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :e
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isLocatedInCity ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :h ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isHeldInCity ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :e ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isRecommendedFor ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :h ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :e
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :cuisineType ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ct
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :ct ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first "vegetarian" ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasLocation ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :l
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :CityCenter ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :l
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :GreenChoice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Attraction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isLocatedInCity ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :population ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :p ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 1000000 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :HighlyRecommended ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

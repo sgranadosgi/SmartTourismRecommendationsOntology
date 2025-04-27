@@ -1,0 +1,678 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.example.org/SmartTourismRecommendationsOntology", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Monument",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Monument"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#BudgetHotel",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BudgetHotel"
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#CityCenter",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CityCenter"
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Hotel",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hotel"
+    },
+    "subClasses" : [ "5", "12" ],
+    "id" : "6",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Accommodation",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accommodation"
+    },
+    "subClasses" : [ "6" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Event",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "14", "15" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#GourmetRestaurant",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GourmetRestaurant"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#CasaPacoRestaurant",
+      "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+      "labels" : {
+        "IRI-based" : "CasaPacoRestaurant"
+      }
+    } ],
+    "id" : "25",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Attraction",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attraction"
+    },
+    "subClasses" : [ "0", "26", "27" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Museum",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Museum"
+    },
+    "id" : "27",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "17", "1", "11" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "40"
+  }, {
+    "instances" : 0,
+    "union" : [ "17", "11" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#CulturalEvent",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalEvent"
+    },
+    "id" : "15",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#MusicEvent",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MusicEvent"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#JazzFestivalMadrid",
+      "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+      "labels" : {
+        "IRI-based" : "JazzFestivalMadrid"
+      }
+    } ],
+    "id" : "14",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Location",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location"
+    },
+    "subClasses" : [ "7", "20" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#OldTown",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OldTown"
+    },
+    "id" : "20",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Park",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Park"
+    },
+    "id" : "26",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#LuxuryHotel",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LuxuryHotel"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#HotelRitzMadrid",
+      "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+      "labels" : {
+        "IRI-based" : "HotelRitzMadrid"
+      }
+    } ],
+    "id" : "12",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#City",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "City"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Barcelona",
+      "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+      "labels" : {
+        "IRI-based" : "Barcelona"
+      }
+    }, {
+      "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Madrid",
+      "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+      "labels" : {
+        "IRI-based" : "Madrid"
+      }
+    } ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#FastFoodRestaurant",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FastFoodRestaurant"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Restaurante_Delicia_Zaragoza",
+      "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+      "labels" : {
+        "IRI-based" : "Restaurante_Delicia_Zaragoza"
+      }
+    } ],
+    "id" : "23",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#Restaurant",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant"
+    },
+    "subClasses" : [ "25", "23" ],
+    "id" : "17"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#country",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "country"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#population",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "population"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#cuisineType",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "cuisineType"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "range" : "8",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "17",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "17",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#attractionType",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "attractionType"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#startDate",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "startDate"
+    },
+    "minCardinality" : "1",
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#isRecommendedFor",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "isRecommendedFor",
+      "undefined" : "isRecommendedFor"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "Relates a hotel with an event it is recommended for."
+    },
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "range" : "1",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "1",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "11",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "6",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "13",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#endDate",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "endDate"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "41"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#isLocatedInCity",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "isLocatedInCity"
+    },
+    "cardinality" : "1",
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#GreenChoice",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "GreenChoice",
+      "undefined" : "GreenChoice"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Indicates that a restaurant is a green (vegetarian) choice."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#hotelCategory",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hotelCategory"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#HighlyRecommended",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "HighlyRecommended",
+      "undefined" : "HighlyRecommended"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Marks attractions as highly recommended if conditions are met."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#description",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#isHeldInCity",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "isHeldInCity"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.example.org/SmartTourismRecommendationsOntology#hasLocation",
+    "baseIri" : "http://www.example.org/SmartTourismRecommendationsOntology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasLocation"
+    },
+    "domain" : "44",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  } ]
+}
