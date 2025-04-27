@@ -1,0 +1,1 @@
+# SmartTourismRecommendationsOntology
